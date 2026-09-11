@@ -34,7 +34,7 @@ export const Footer: React.FC<FooterProps> = ({ language = 'ko', onOpenInquiry }
           <div className="max-w-2xl text-left text-xs leading-relaxed text-white/55 sm:text-sm">
             <div className="mb-3 text-base font-medium text-white/80">VENASTUDIO {isKo ? '(베나스튜디오)' : ''}</div>
             <div>{isKo ? '사업자등록번호:' : 'Business registration:'} 890-26-02018 {isKo ? '대표자:' : 'Representative:'} DO HIEN THAO</div>
-            <div>{isKo ? '문의:' : 'Contact:'} 010-7208-2408 | venastudio@naver.com</div>
+            <div>venastudio@naver.com</div>
             <div>{isKo ? '소재지:' : 'Address:'} {isKo ? '경기도 고양시 일산서구 일산로 757(대화동)' : '757 Ilsan-ro, Ilsanseo-gu, Goyang-si, Gyeonggi-do'}</div>
             <div>757 Ilsan-ro, Ilsanseo-gu, Goyang-si, Gyeonggi-do, Republic of Korea</div>
           </div>
