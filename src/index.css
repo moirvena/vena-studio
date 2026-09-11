@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #f5f3ef;
+    color: #18181b;
+    overflow-x: hidden;
+  }
+
+  h1, h3, .font-syne {
+    font-family: 'Archivo Black', 'Arial Black', 'Noto Sans KR', sans-serif;
+    letter-spacing: -0.08em;
+  }
+
+  .font-editorial {
+    font-family: 'Georgia', 'Noto Sans KR', serif;
+  }
+
+  .hero-display {
+    font-family: 'Archivo Black', 'Arial Black', 'Noto Sans KR', sans-serif;
+    font-weight: 900;
+    letter-spacing: -0.08em;
+    line-height: 0.84;
+    text-transform: uppercase;
+  }
+}
+
+/* Custom scrollbar for light theme */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f4f4f5;
+}
+::-webkit-scrollbar-thumb {
+  background: #d4d4d8;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a1a1aa;
+}
+
+@keyframes float-subtle {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+.animate-float {
+  animation: float-subtle 4s ease-in-out infinite;
+}
+

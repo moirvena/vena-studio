@@ -1,0 +1,40 @@
+{
+  "entities": {
+    "inquiries": {
+      "title": "Inquiries",
+      "description": "Client consultation requests and quote submissions",
+      "properties": {
+        "id": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "brandName": { "type": "string" },
+        "contactPerson": { "type": "string" },
+        "email": { "type": "string" },
+        "phone": { "type": "string" },
+        "selectedPackage": { "type": "string" },
+        "selectedAddons": { "type": "array" },
+        "targetMarkets": { "type": "array" },
+        "category": { "type": "string" },
+        "instagramHandle": { "type": "string" },
+        "websiteUrl": { "type": "string" },
+        "monthlyBudget": { "type": "string" },
+        "message": { "type": "string" },
+        "status": { "type": "string" },
+        "userId": { "type": "string" },
+        "estimatedCost": { "type": "number" }
+      },
+      "required": ["brandName", "email", "createdAt"]
+    },
+    "portfolioSamples": {
+      "title": "Portfolio Showcase",
+      "description": "Visual work samples across beauty, food, lifestyle and fashion",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "category": { "type": "string" },
+        "market": { "type": "string" },
+        "type": { "type": "string" },
+        "metrics": { "type": "string" }
+      }
+    }
+  }
+}

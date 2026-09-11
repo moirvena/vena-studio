@@ -1,0 +1,6 @@
+{
+  "name": "VENA STUDIO - Global SNS Marketing Studio",
+  "description": "한국 브랜드의 가능성을 더 넓은 시장으로. 글로벌 SNS 마케팅 & 콘텐츠 스튜디오 VENA STUDIO",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
