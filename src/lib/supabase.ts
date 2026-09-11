@@ -52,7 +52,15 @@ export interface AdminInquiry {
   brand_name: string;
   contact_person: string;
   email: string;
+  phone: string | null;
   selected_package: string;
+  selected_addons: string[] | null;
+  target_markets: string[] | null;
+  category: string | null;
+  instagram_handle: string | null;
+  website_url: string | null;
+  monthly_budget: string | null;
+  message: string | null;
   status: string;
   created_at: string;
 }
@@ -60,6 +68,6 @@ export interface AdminInquiry {
 export async function fetchAdminInquiries() {
   return supabase
     .from('inquiries')
-    .select('id, brand_name, contact_person, email, selected_package, status, created_at')
+    .select('id, brand_name, contact_person, email, phone, selected_package, selected_addons, target_markets, category, instagram_handle, website_url, monthly_budget, message, status, created_at')
     .order('created_at', { ascending: false });
 }
