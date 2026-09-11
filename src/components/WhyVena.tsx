@@ -50,14 +50,14 @@ export const WhyVena: React.FC<WhyVenaProps> = ({ language = 'ko' }) => {
 
         <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
           {[
-            { value: '<24h', label: 'turnaround' },
-            { value: '∞', label: 'creative ideas' },
-            { value: '100%', label: 'tailored strategy' },
-            { value: '6', label: 'core services' },
+            { value: '<24h', label: 'turnaround', card: 'bg-[#ff4d8d] border-[#ff8fba]', text: 'text-zinc-950', labelText: 'text-zinc-900/75' },
+            { value: '∞', label: 'creative ideas', card: 'bg-[#39c4f4] border-[#8de5ff]', text: 'text-zinc-950', labelText: 'text-zinc-900/75' },
+            { value: '100%', label: 'tailored strategy', card: 'bg-[#ffc928] border-[#ffe58a]', text: 'text-zinc-950', labelText: 'text-zinc-900/75' },
+            { value: '6', label: 'core services', card: 'bg-[#a855f7] border-[#d8a8ff]', text: 'text-white', labelText: 'text-white/80' },
           ].map((item) => (
-            <div key={item.label} className="rounded-[28px] border border-white/15 bg-white/5 p-6 text-center shadow-[0_12px_30px_rgba(0,0,0,0.2)] backdrop-blur-sm">
-              <div className="text-4xl font-black tracking-[-0.08em] text-white sm:text-5xl">{item.value}</div>
-              <div className="mt-3 text-[11px] font-bold uppercase tracking-[0.2em] text-white/60">{item.label}</div>
+            <div key={item.label} className={`rounded-[28px] border p-6 text-center shadow-[0_12px_30px_rgba(0,0,0,0.3)] ${item.card}`}>
+              <div className={`text-4xl font-black tracking-[-0.08em] sm:text-5xl ${item.text}`}>{item.value}</div>
+              <div className={`mt-3 text-[11px] font-bold uppercase tracking-[0.2em] ${item.labelText}`}>{item.label}</div>
             </div>
           ))}
         </div>
