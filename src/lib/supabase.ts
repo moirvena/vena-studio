@@ -46,3 +46,20 @@ export async function submitSupabaseInquiry(data: SupabaseInquiryInput): Promise
   if (error) throw error;
   return id;
 }
+
+export interface AdminInquiry {
+  id: string;
+  brand_name: string;
+  contact_person: string;
+  email: string;
+  selected_package: string;
+  status: string;
+  created_at: string;
+}
+
+export async function fetchAdminInquiries() {
+  return supabase
+    .from('inquiries')
+    .select('id, brand_name, contact_person, email, selected_package, status, created_at')
+    .order('created_at', { ascending: false });
+}

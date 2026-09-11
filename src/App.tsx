@@ -10,10 +10,15 @@ import { AddonsSection } from './components/AddonsSection';
 import { Footer } from './components/Footer';
 import { InquiryModal } from './components/InquiryModal';
 import { ClientInquiriesDrawer } from './components/ClientInquiriesDrawer';
+import { AdminPage } from './components/AdminPage';
 import { auth, fetchUserInquiries } from './lib/firebase';
 import { onAuthStateChanged, User } from 'firebase/auth';
 
 export default function App() {
+  if (window.location.pathname === '/admin') {
+    return <AdminPage />;
+  }
+
   const [language, setLanguage] = useState<'ko' | 'en'>('ko');
   const [inquiryModalOpen, setInquiryModalOpen] = useState(false);
   const [inquiriesDrawerOpen, setInquiriesDrawerOpen] = useState(false);
