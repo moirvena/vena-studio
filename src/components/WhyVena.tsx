@@ -41,11 +41,11 @@ export const WhyVena: React.FC<WhyVenaProps> = ({ language = 'ko' }) => {
   const isKo = language === 'ko';
 
   return (
-    <section id="why-vena" className="border-b border-zinc-200/80 bg-[#dff3ff] py-20 text-zinc-900">
+    <section id="why-vena" className="border-b border-zinc-800 bg-[#0b0c0d] py-20 text-white">
       <div className="max-w-[1200px] mx-auto px-5 sm:px-8">
         <div className="mb-10 text-center">
-          <p className="mb-4 text-[11px] font-bold uppercase tracking-[0.2em] text-zinc-700/80">Our metrics</p>
-          <h2 className="text-4xl font-black tracking-[-0.08em] text-zinc-900 sm:text-6xl">&lt;24h</h2>
+          <p className="mb-4 text-[11px] font-bold uppercase tracking-[0.2em] text-white/60">Our metrics</p>
+          <h2 className="text-4xl font-black tracking-[-0.08em] text-white sm:text-6xl">&lt;24h</h2>
         </div>
 
         <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
@@ -55,9 +55,9 @@ export const WhyVena: React.FC<WhyVenaProps> = ({ language = 'ko' }) => {
             { value: '100%', label: 'tailored strategy' },
             { value: '6', label: 'core services' },
           ].map((item) => (
-            <div key={item.label} className="rounded-[28px] border border-sky-200 bg-white/40 p-6 text-center shadow-[0_12px_30px_rgba(125,211,252,0.12)] backdrop-blur-sm">
-              <div className="text-4xl font-black tracking-[-0.08em] text-zinc-900 sm:text-5xl">{item.value}</div>
-              <div className="mt-3 text-[11px] font-bold uppercase tracking-[0.2em] text-zinc-700">{item.label}</div>
+            <div key={item.label} className="rounded-[28px] border border-white/15 bg-white/5 p-6 text-center shadow-[0_12px_30px_rgba(0,0,0,0.2)] backdrop-blur-sm">
+              <div className="text-4xl font-black tracking-[-0.08em] text-white sm:text-5xl">{item.value}</div>
+              <div className="mt-3 text-[11px] font-bold uppercase tracking-[0.2em] text-white/60">{item.label}</div>
             </div>
           ))}
         </div>
