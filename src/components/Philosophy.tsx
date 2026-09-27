@@ -8,15 +8,15 @@ interface PhilosophyProps {
 export const Philosophy: React.FC<PhilosophyProps> = ({ language = 'ko', onOpenInquiry }) => {
   return (
     <>
-      <section id="about" className="py-14 border-b border-zinc-200/80 bg-[#39c4f4] text-zinc-900">
+      <section id="about" className="py-14 border-b border-zinc-200/80 bg-[#0b0c0d] text-zinc-900">
         <div className="max-w-[1200px] mx-auto px-5 sm:px-8">
-          <div className="flex flex-col items-center justify-center text-center gap-4 text-white">
-            <p className="text-sm font-bold uppercase tracking-[0.2em] text-white/90">GLOBAL SOCIAL MEDIA AGENCY</p>
-            <h2 className="max-w-4xl text-4xl font-black leading-none tracking-[-0.07em] sm:text-6xl text-white">
-              {language === 'ko' ? '해외 진출,' : 'Going global,'}
-              <span className="block text-white">{language === 'ko' ? 'SNS부터 제대로.' : 'start with social.'}</span>
+          <div className="flex flex-col items-center justify-center text-center gap-4">
+            <p className="text-sm font-bold uppercase tracking-[0.2em] text-white/60">GLOBAL SOCIAL MEDIA AGENCY</p>
+            <h2 className="max-w-4xl text-4xl font-black leading-none tracking-[-0.07em] sm:text-6xl">
+              <span className="text-[#ff4d8d]">{language === 'ko' ? '해외 진출,' : 'Going global,'}</span>
+              <span className="block text-[#39c4f4]">{language === 'ko' ? 'SNS부터 제대로.' : 'start with social.'}</span>
             </h2>
-            <p className="max-w-3xl text-base text-white/90 sm:text-lg">
+            <p className="max-w-3xl text-base text-zinc-400 sm:text-lg">
               {language === 'ko' ? (
                 <>새로운 시장에는 새로운 콘텐츠와 전략이 필요합니다. <br />VENA는 글로벌 진출을 준비하는 브랜드를 위해 <br />시장별 SNS 전략부터 콘텐츠 제작, 현지화, 채널 운영까지 원스톱으로 제공합니다.</>
               ) : (

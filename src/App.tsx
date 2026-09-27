@@ -3,6 +3,7 @@ import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { Philosophy } from './components/Philosophy';
 import { ServicesSection } from './components/ServicesSection';
+import { ClientReports } from './components/ClientReports';
 import { WhyVena } from './components/WhyVena';
 import { WhoWeWorkWith } from './components/WhoWeWorkWith';
 import { PackagesSection } from './components/PackagesSection';
@@ -94,6 +95,9 @@ export default function App() {
 
         {/* Services: WHAT WE DO (01 to 06) */}
         <ServicesSection language={language} onOpenInquiry={handleOpenInquiry} />
+
+        {/* Client Reports: Previous Client Case Studies */}
+        <ClientReports language={language} />
 
         {/* Why VENA: 4 Pillars & Unified Flow */}
         <WhyVena language={language} />
