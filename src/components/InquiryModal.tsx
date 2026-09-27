@@ -94,29 +94,29 @@ export const InquiryModal: React.FC<InquiryModalProps> = ({
         message,
       });
 
-      const inquirySubject = `[VENASTUDIO 문의] ${brandName} - ${selectedPackage}`;
-      const inquiryBody = [
-        'VENASTUDIO 프로젝트 문의',
-        '',
-        `브랜드명 / 기업명: ${brandName}`,
-        `담당자: ${contactPerson}`,
-        `회신 이메일: ${email}`,
-        `연락처: ${phone || '-'}`,
-        `관심 패키지: ${selectedPackage}`,
-        `추가 옵션: ${selectedAddons.length ? selectedAddons.join(', ') : '-'}`,
-        `타깃 국가: ${targetMarkets.length ? targetMarkets.join(', ') : '-'}`,
-        `제품 / 산업 카테고리: ${category}`,
-        `Instagram: ${instagramHandle || '-'}`,
-        `웹사이트: ${websiteUrl || '-'}`,
-        `월 예산: ${monthlyBudget}`,
-        '',
-        '문의 내용:',
-        message || '-',
-        '',
-        `접수 번호: ${docId}`,
-      ].join('\n');
-
-      window.location.href = `mailto:venastudio@naver.com?subject=${encodeURIComponent(inquirySubject)}&body=${encodeURIComponent(inquiryBody)}`;
+      try {
+        await fetch('/api/send-inquiry', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            brandName,
+            contactPerson,
+            email,
+            phone,
+            selectedPackage,
+            selectedAddons,
+            targetMarkets,
+            category,
+            instagramHandle,
+            websiteUrl,
+            monthlyBudget,
+            message,
+            inquiryId: docId,
+          }),
+        });
+      } catch (emailErr) {
+        console.error('Failed to send inquiry email notification:', emailErr);
+      }
 
       setSubmittedId(docId);
       setSuccess(true);
